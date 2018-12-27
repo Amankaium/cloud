@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+
+    <div class="">
+      
+      <h4 class="text-uppercase">
+        Need help? Write us:
+      </h4>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-dark">Send</button>
+      </form>
+    </div>
+
+{% endblock %}
